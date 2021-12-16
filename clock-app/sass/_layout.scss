@@ -1,0 +1,143 @@
+body{
+    overflow: hidden;
+}
+.wrapper{
+    padding: 4% 11.5%;
+    @include md{
+        padding: 8.5%;
+    }
+}
+main{
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+
+    &.more-hidden{
+        top: 0%;
+    }
+    &.more-shown{
+        top: calc(-50vh);
+        @include md{
+            top: calc(-43vh);
+        }
+    }
+    .quote{
+        width: 50%;
+        height: 50vh;
+        padding-right: 0;
+        @include md{
+            height: 43vh;
+            width: 100%;
+            padding-right: 11.5%;
+        }
+        @include sm{
+            
+            padding-right: 8.5%;
+        }
+    }
+    .overview{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
+        @include md{
+            height: 57vh;
+            // justify-content: space-between;
+        }
+        section{
+            @include md{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            .greeting{
+                display: flex;
+                padding-bottom: 16px;
+                img{
+                    padding-right: 12px;
+                }
+            }
+            .time{
+                display: flex;
+                align-items: baseline;
+                .current-zone-abbr{
+                    padding-left: 3rem;
+                    @include sm{
+                        padding-left: 2rem;
+                    }
+                }
+                @include sm{
+                    margin: 16px 0;
+                }
+            }
+            .btm{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                .btn{
+                    @include md{
+                        padding-top: 12.5%;
+                    }
+                }
+                @include md{
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+    .more-panel{
+        display: flex;
+        align-items: center;
+        height: 50vh;
+        @include md{
+            height: 43vh;
+        }
+        .more-content{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 1px 50%;
+            row-gap: 2.6rem;
+            column-gap: 6rem;
+            @include md{
+                grid-template-columns: 1fr 1fr;
+            }
+            @include sm{
+                display: block;
+            }
+            .day-of-week{
+                order: 2;
+            }
+            .day-of-year{
+                order: 3;
+            }
+            .week-num{
+                order: 4;
+            }
+            .divider{
+                grid-column: 2/3;
+                grid-row: 1/3;
+                opacity: 0.25;
+                span{
+                    background-color: white;
+                    display: flex;
+                    height: 100%;
+                }
+                @include md{
+                    display: none;
+                }
+            }
+            h6{
+                margin-bottom: 9px;
+            }
+            div{
+                @include sm{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}

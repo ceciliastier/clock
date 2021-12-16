@@ -1,0 +1,10 @@
+.greeting img{
+    object-fit: contain;
+}
+.greeting h4{
+    &:last-of-type{
+        @include sm{
+            display: none;
+        }
+    }
+}

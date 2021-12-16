@@ -1,0 +1,47 @@
+button{
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 100px;
+    padding: 8px;
+    width: 145px;
+    justify-content: flex-end;
+    span{
+        padding-right: 10%;
+    }
+    .arrow{
+        background-color: #303030;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.6s;
+        @include sm{
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &:hover .arrow{
+        background-color: #999;
+        @include md{
+            background-color: #303030;
+        }
+    }
+    @include sm{
+        width: 115px;
+        padding: 4px;
+    }
+}
+.more-shown{
+    .arrow{
+        transform: rotate(180deg);
+    }
+}
+
+// refresh btn
+.quote img{
+    float: right;
+    padding: 0 0 10% 20px; 
+}

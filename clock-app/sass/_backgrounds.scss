@@ -1,0 +1,32 @@
+main{
+    background-size: cover;
+    background-attachment: fixed;
+
+    background-repeat: no-repeat;
+    &.daytime{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../assets/images/desktop/bg-image-daytime.jpg);
+        @include md{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../assets/images/tablet/bg-image-daytime.jpg);
+        }
+        @include sm{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../assets/images/mobile/bg-image-daytime.jpg);
+        }
+        .more-panel{
+            background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+            backdrop-filter: blur(5px);
+        }
+    }
+    &.nighttime{
+        background-image: url(../assets/images/desktop/bg-image-nighttime.jpg);
+        @include md{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../assets/images/tablet/bg-image-nighttime.jpg);
+        }
+        @include sm{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../assets/images/mobile/bg-image-nighttime.jpg);
+        }
+        .more-panel{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+            backdrop-filter: blur(40px);
+        }
+    }
+}

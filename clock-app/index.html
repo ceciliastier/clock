@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="assets/app.css">
+
+  <title>Clock App</title>
+</head>
+
+<body>
+
+  <main class="nighttime more-hidden">
+
+
+    <!-- quote -->
+    <figure class="wrapper quote">
+      <img class="refresh-btn" src="./assets/images/desktop/icon-refresh.svg" alt="refresh">
+      <blockquote>
+        <p></p>
+      </blockquote>
+      <figcaption>
+        <h5 class="author"></h5>
+      </figcaption>
+    </figure>
+
+
+    <!-- time and location -->
+    <div class="overview wrapper">
+      <section>
+        <div class="greeting">
+          <img alt="sun icon" class="icon">
+          <h4></h4><h4>, it's currently</h4>
+        </div>
+
+        <div class="time">
+          <h1 class="curr-time"></h1>
+          <span class="current-zone-abbr"></span>
+        </div>
+
+        <div class="btm">
+          <div class="location">
+            <h3>in </h3>
+          </div>
+
+          <div class="btn">
+            <button>
+              <span>More</span>
+              <div class="arrow">
+                <img src="assets/images/desktop/icon-arrow-down.svg" alt="down arrow">
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="more-panel wrapper">
+      <section class="more-content">
+
+        <div class="current-zone">
+          <h6>Current Timezone</h6>
+          <h2></h2>
+        </div>
+
+        <div class="day-of-year">
+          <h6>Day of the Year</h6>
+          <h2></h2>
+        </div>
+        
+        <div class="divider">
+          <span></span>
+        </div>
+
+        <div class="day-of-week">
+          <h6>Day of the Week</h6>
+          <h2></h2>
+        </div>
+
+        <div class="week-num">
+          <h6>Week Number</h6>
+          <h2></h2>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="assets/scripts/dropdown-panel.js"></script>
+  <script src="assets/scripts/location.js"></script>
+  <script src="assets/scripts/time.js"></script>
+  <script src="assets/scripts/quotes.js"></script>
+</body>
+
+</html>
